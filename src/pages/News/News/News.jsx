@@ -3,9 +3,10 @@ import { Button, Card } from 'react-bootstrap';
 import { Link, useLoaderData } from 'react-router-dom';
 import { FaArrowLeft } from "react-icons/fa";
 
+
 const News = () => {
     const news = useLoaderData();
-    const { title, details, _id, image_url, category_id} = news;
+    const { title, details, _id, image_url, category_id } = news;
 
     return (
         <div>
@@ -14,9 +15,9 @@ const News = () => {
                 <Card.Body>
                     <Card.Title>{title}</Card.Title>
                     <Card.Text>
-                     {details}
+                        {details}
                     </Card.Text>
-                  <Link to={`/category/${category_id}`}>  <Button variant="danger"><FaArrowLeft/> All News in this Category</Button></Link>
+                    <Link to={`/category/${category_id}`}>  <Button variant="danger"><FaArrowLeft /> All News in this Category</Button></Link>
                 </Card.Body>
             </Card>
         </div>
